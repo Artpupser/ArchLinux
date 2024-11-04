@@ -30,13 +30,13 @@ let buildingInterface = [{
 {
    title: "Drivers",
    list: [
-      ""
+      "yay -S nvidia nvidia-utils nvidia-settings opencl-nvidia mesa mesa-utils"
    ]
 },
 {
    title: "Programs",
    list: [
-      "yay libreoffice qbittorrent obsidian firefox vlc telegram-desktop visual-studio-code-bin blender krita"
+      "yay -S libreoffice qbittorrent obsidian firefox vlc telegram-desktop visual-studio-code-bin blender krita"
    ]
 },
 {
