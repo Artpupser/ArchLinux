@@ -3,7 +3,7 @@ let buildingInterface = [{
    list: [
       "pacman -S git",
       "cd ~/",
-      "git clone https://github.com/Jguer/yay.git",
+      "git clone https://aur.archlinux.org/yay.git",
       "cd ~/yay",
       "makepkg -sric",
       "cd ..",
@@ -16,6 +16,7 @@ let buildingInterface = [{
    list: [
       "yay -S zsh",
       "sh -c \"$(curl -fsSL https://install.ohmyz.sh/)\"",
+      "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k",
       "nano ~/.zshrc",
       "find parameter > ZSH_THEME > put this > \"powerlevel10k/powerlevel10k\"",
       "reboot terminal",
