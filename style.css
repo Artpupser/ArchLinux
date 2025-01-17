@@ -1,44 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-*{
-   padding: 0;
-   margin: 0;
-   font-family:"Kiwi Maru", monospace;
-   list-style: none;
-   scroll-behavior: smooth;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Kiwi Maru", monospace;
+  list-style: none;
+  scroll-behavior: smooth;
 }
 
 ::-moz-selection {
-   background-color:burlywood;
+  background-color: burlywood;
 }
 
-h1{
-   font-size: 2em;
-   user-select: none;
-   font-weight: 700;
+h1 {
+  font-size: 2em;
+  user-select: none;
+  font-weight: 700;
 }
 
 body {
-   background-color: black;
-   transition-duration: 1s;
-   transition-timing-function: ease-in;
+  background-color: black;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+}
+
+.link-container>.link {
+  padding: 5px;
 }
 
 .container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: nowrap;
-   flex-direction: column;
-   width: 100dvw;
-   margin-bottom: 3em;
-}
-.list{
-   text-decoration: none;
-   font-size: 1.3em;
-   width: calc(100dvw / 1.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100dvw;
+  margin-bottom: 3em;
 }
 
-.list > li::before{
-   content: '~ ';
+.list {
+  text-decoration: none;
+  font-size: 1.3em;
+  width: calc(100dvw / 1.1);
+}
+
+.list>.line::before {
+  content: '~ ';
 }
