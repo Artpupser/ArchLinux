@@ -16,6 +16,7 @@ h1 {
   font-size: 2em;
   user-select: none;
   font-weight: 700;
+  cursor: pointer;
 }
 
 body {

@@ -49,6 +49,22 @@ let buildingInterface = [{
   ]
 },
 {
+  title: "Bluetooth",
+  list: [
+    "yay -S bluez",
+    "sudo systemctl start bluetooth",
+    "sudo systemctl enable bluetooth"
+  ]
+},
+{
+  title: "Printing HP LaserJet P1102",
+  list: [
+    "yay -S cups hplip",
+    "sudo systemctl start cups",
+    "hp-setup -i"
+  ]
+},
+{
   title: "Programs",
   list: [
     "yay -S libreoffice qbittorrent obsidian firefox vlc telegram-desktop visual-studio-code-bin blender krita"
@@ -63,7 +79,7 @@ let buildingInterface = [{
 {
   title: "Gaming",
   list: [
-    "yay -S wine gamescope mangohud gamemode mono heroic-games-launcher-bin startwine lutris",
+    "yay -S wine gamescope mangohud gamemode mono steam heroic-games-launcher-bin startwine lutris",
   ]
 },
 {
@@ -78,24 +94,27 @@ let buildingInterface = [{
 function build(building) {
   let container = newElement("div", ["class", "container"], null);
   document.body.appendChild(container)
-  let linkContainer = newElement("div", ["class", "link-container"], null);
+  let linkContainerEl = newElement("div", ["class", "link-container"], null);
   for (const i in building) {
     const brick = building[i]
-    let link = newElement("a", ["href", `#${brick.title}`], brick.title)
-    link.setAttribute("class", "link")
-    linkContainer.appendChild(link);
+    let linkEl = newElement("a", ["href", `#${brick.title}`], brick.title)
+    linkEl.setAttribute("class", "link")
+    linkContainerEl.appendChild(linkEl);
   }
-  container.appendChild(linkContainer);
+  container.appendChild(linkContainerEl);
   for (const i in building) {
     const brick = building[i]
-    let titleElement = newElement("h1", ["id", `${brick.title}`], brick.title)
-    let listElement = newElement("div", ["class", "list"], null)
+    let titleEl = newElement("h1", ["id", `${brick.title}`], brick.title)
+    titleEl.addEventListener('click', (mouseEv) => {
+      navigator.clipboard.writeText(brick.list.join("\n"));
+    })
+    let listEl = newElement("div", ["class", "list"], null)
     for (const j in brick.list) {
       let lineEl = newElement("p", ["class", "line"], brick.list[j])
-      listElement.appendChild(lineEl)
+      listEl.appendChild(lineEl)
     }
-    container.appendChild(titleElement)
-    container.appendChild(listElement)
+    container.appendChild(titleEl)
+    container.appendChild(listEl)
   }
 }
 
