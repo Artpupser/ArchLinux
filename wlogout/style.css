@@ -1,0 +1,52 @@
+@import '../../.cache/wal/colors-waybar.css';
+
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background-color: alpha(@background, 0.85);
+}
+
+button {
+    border-radius: 20px;
+    color: @foreground;
+    background-color: alpha(@color8, 0.85);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+        outline-style: none;
+    transition: all 0.2s ease;
+}
+
+button:hover,
+button:focus,
+button:active {
+    background-color: @color4;
+    color: @background;
+    border-color: @color6;
+    outline: none;
+    background-size: 30%
+}
+
+#lock {
+    background-image: url("./icons/lock.png");
+margin:1em;
+}
+
+#logout {
+    background-image: url("./icons/logout.png");
+margin:1em;
+}
+
+
+#shutdown {
+    background-image: url("./icons/shutdown.png");
+    margin:1em;
+}
+
+#reboot {
+    background-image: url("./icons/reboot.png");
+    margin:1em;
+}

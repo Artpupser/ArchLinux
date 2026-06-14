@@ -1,0 +1,65 @@
+configuration {
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: true;
+    modi: "drun,ssh,calc";
+    combi-modes: "drun,ssh,calc";
+    sidebar-mode: true;
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     true;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+* {
+    bg: @background;
+    fg: @foreground;
+    selected: @color4;
+    active: @color2;
+    urgent: @color1;
+}
+
+window {
+    transparency: "real";
+    location: center;
+    width: 35%;
+    height: 45%;
+    border-radius: 12px;
+    background-color: @bg;
+}
+
+mainbox {
+    padding: 12px;
+    spacing: 10px;
+	location: north;
+    border-radius: 15px;
+}
+
+inputbar {
+    padding: 8px;
+    border-radius: 8px;
+    border-radius: 15px;
+}
+
+entry {
+    placeholder: "Search...";
+}
+
+listview {
+lines: 6;
+columns: 2;
+    spacing: 6px;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px;
+    border-radius: 15px;
+}
+
+element selected {
+    text-color: @background;
+    border-radius: 15px;
+}

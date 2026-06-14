@@ -1,0 +1,7 @@
+shell-integration = zsh
+command = /usr/bin/zsh -l
+font-family = JetBrainsMono Nerd Font
+background-opacity = 0.8
+window-decoration = true
+cursor-style = block
+cursor-style-blink = false

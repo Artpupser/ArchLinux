@@ -1,0 +1,12 @@
+{
+    "label" : "lock",
+    "action" : "hyprlock",
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+}
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+}
