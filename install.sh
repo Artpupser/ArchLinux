@@ -29,7 +29,7 @@ NAMES=(
 )
 PACKAGES=(
   "git base-devel"
-  "nvim npm pnpm nodejs dotnet-runtime dotnet-sdk mono python lrzip unrar unzip unace p7zip squashfs-tools rbenv lua perl vlc ttf-jetbrains-mono-nerd ttf-firacode-nerd waybar wlogout clang"
+  "nvim npm pnpm nodejs dotnet-runtime dotnet-sdk mono python lrzip unrar unzip unace p7zip squashfs-tools rbenv lua perl vlc vlc-plugins-all ttf-jetbrains-mono-nerd ttf-firacode-nerd waybar wlogout clang"
   "nvidia"
   "hyprland rofi ghostty nemo flameshot sddm xdg-desktop-portal-hyprland waybar hyprpolkitagent hyprpaper"
   "pavucontrol firefox obsidian blender krita zsh qbittorrent unityhub" # [APPLICATIONS]
@@ -91,6 +91,8 @@ function copy_configurations() {
   sudo cp ./wal-vide-sync.sh ~/.config/
   sudo cp ./mpvpaper_auto_pause.sh ~/.config/
   sudo cp ./mpvpaper_start.sh ~/.config/
+  sudo cp ./sddm.conf /etc/sddm.conf
+  sudo cp -r ./silent /usr/share/sddm/themes/silent
   echo_color "Apply configurations" $GREEN	
   systemctl restart systemd-sysctl.service
   grub-mkconfig -o /boot/grub/grub.cfg
